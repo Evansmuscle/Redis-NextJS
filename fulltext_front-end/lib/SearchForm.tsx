@@ -20,9 +20,11 @@ export default function SearchForm() {
   };
 
   return (
-    <div>
-      <label htmlFor="search">Search Here</label>
-      <input onChange={search} type="text" name="search" />
+    <div className="form">
+      <label className="label" htmlFor="search">
+        Search Here
+      </label>
+      <input className="input" onChange={search} type="text" name="search" />
 
       <ul>
         {hits.map((hit: Car) => (
@@ -30,7 +32,7 @@ export default function SearchForm() {
             <p>
               {hit.make} {hit.model}
             </p>
-            <Image src={hit.image} alt="a car image" width={300} height={300} />
+            <Image src={hit.image} alt="a car image" width={300} height={200} />
           </li>
         ))}
       </ul>

@@ -26,56 +26,26 @@ export default function CarForm() {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      style={{ display: "flex", flexDirection: "column", width: "30vw" }}
-    >
-      <label htmlFor="make">Make</label>
-      <input
-        name="make"
-        type="text"
-        style={{
-          borderColor: "gray",
-          backgroundColor: "lightgray",
-          height: 50,
-          marginTop: 10,
-        }}
-      />
+    <form onSubmit={handleSubmit} className="form">
+      <label className="label" htmlFor="make">
+        Make
+      </label>
+      <input className="input" name="make" type="text" />
 
-      <label htmlFor="model">Model</label>
-      <input
-        name="model"
-        type="text"
-        style={{
-          borderColor: "gray",
-          backgroundColor: "lightgray",
-          height: 50,
-          marginTop: 10,
-        }}
-      />
-      <label htmlFor="image">Image</label>
-      <input
-        name="image"
-        type="text"
-        style={{
-          borderColor: "gray",
-          backgroundColor: "lightgray",
-          height: 50,
-          marginTop: 10,
-        }}
-      />
-      <label htmlFor="description">Description</label>
-      <textarea
-        name="description"
-        style={{
-          borderColor: "gray",
-          backgroundColor: "lightgray",
-          height: 50,
-          marginTop: 10,
-        }}
-      />
+      <label className="label" htmlFor="model">
+        Model
+      </label>
+      <input className="input" name="model" type="text" />
+      <label className="label" htmlFor="image">
+        Image
+      </label>
+      <input className="input" name="image" type="text" />
+      <label className="label" htmlFor="description">
+        Description
+      </label>
+      <textarea className="textarea" name="description" />
 
-      <button style={{ marginTop: 20, marginBottom: 20 }} type="submit">
+      <button className="btn-submit" type="submit">
         Create Car
       </button>
     </form>
